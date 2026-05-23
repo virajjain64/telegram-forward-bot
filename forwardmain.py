@@ -8,7 +8,7 @@
 ╚══════════════════════════════════════════════════════════════╝
 
 Environment Variables Required:
-    BOT_TOKEN   = 7826065412:AAGD9uz_LNpMiWN3uPgyMWt2NPI1hUmNrU0 <----- paste your Bot Token here (from @BotFather)
+    BOT_TOKEN   = 8986972976:AAGj0PFm_4wbPieaXBd423XHsISEENcLYnM <----- paste your Bot Token here (from @BotFather)
     API_ID      = 36421171 <----- paste your API ID here (from my.telegram.org)
     API_HASH    = 069627fa19eb45a775ce87939f1768c5 <----- paste your API Hash here (from my.telegram.org)
 
@@ -79,7 +79,7 @@ from telethon.tl.types import (
 #  Environment Variables
 #  PASTE YOUR CREDENTIALS BELOW ↓
 # ─────────────────────────────────────────────
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7826065412:AAGD9uz_LNpMiWN3uPgyMWt2NPI1hUmNrU0")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8986972976:AAGj0PFm_4wbPieaXBd423XHsISEENcLYnM")
 API_ID    = int(os.environ.get("API_ID",    "36421171"))        # <----- paste your API ID here
 API_HASH  = os.environ.get("API_HASH",  "069627fa19eb45a775ce87939f1768c5")
 
@@ -1789,7 +1789,7 @@ def main() -> None:
     logger.info("=" * 60)
 
     # Validate credentials
-    if BOT_TOKEN == "7826065412:AAGD9uz_LNpMiWN3uPgyMWt2NPI1hUmNrU0":
+    if BOT_TOKEN == "8986972976:AAGj0PFm_4wbPieaXBd423XHsISEENcLYnM":
         logger.critical("❌ BOT_TOKEN not set! Set the BOT_TOKEN environment variable.")
         return
     if API_ID == 36421171:
@@ -1852,9 +1852,9 @@ if __name__ == "__main__":
 # 1. Push this file to GitHub repo
 # 2. Connect repo to Railway.app
 # 3. Set Environment Variables in Railway dashboard:
-#       BOT_TOKEN  = your_bot_token_here        ← from @BotFather
-#       API_ID     = your_api_id_here           ← from my.telegram.org
-#       API_HASH   = your_api_hash_here         ← from my.telegram.org
+#       BOT_TOKEN  = 8986972976:AAGj0PFm_4wbPieaXBd423XHsISEENcLYnM        ← from @BotFather
+#       API_ID     = 36421171           ← from my.telegram.org
+#       API_HASH   = 069627fa19eb45a775ce87939f1768c5         ← from my.telegram.org
 #
 # 4. Railway auto-deploys on push ✅
 #
