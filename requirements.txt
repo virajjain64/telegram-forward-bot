@@ -1,2 +1,17 @@
-python-telegram-bot
-telethon
+# Core Bot Framework
+python-telegram-bot==20.7
+
+# MTProto Client for Forwarding
+telethon==1.34.0
+
+# Async Support
+asyncio
+
+# HTTP Client (PTB dependency)
+httpx==0.26.0
+
+# Cryptography (Telethon dependency)
+cryptography>=3.4.0
+
+# Additional dependencies
+pytz==2024.1
