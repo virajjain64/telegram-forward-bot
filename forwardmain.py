@@ -1983,7 +1983,7 @@ async def show_access_denied(update: Update, context: ContextTypes.DEFAULT_TYPE)
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton(
             "🔗 JOIN CHANNEL ⚡",
-            url=f"https://t.me/{REQUIRED_CHANNEL.lstrip('@')}"
+            url=f"https://t.me/Restrictedcontentforward_bot27.lstrip('@')}"
         )],
         [InlineKeyboardButton(
             "✅ VERIFY MEMBERSHIP 🔍",
