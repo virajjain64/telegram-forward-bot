@@ -8,9 +8,9 @@
 ╚══════════════════════════════════════════════════════════════╝
 
 Environment Variables Required:
-    BOT_TOKEN   = 8986972976:AAGj0PFm_4wbPieaXBd423XHsISEENcLYnM <----- paste your Bot Token here (from @BotFather)
-    API_ID      = 36421171 <----- paste your API ID here (from my.telegram.org)
-    API_HASH    = 069627fa19eb45a775ce87939f1768c5 <----- paste your API Hash here (from my.telegram.org)
+    BOT_TOKEN   = <----- paste your Bot Token here (from @BotFather)
+    API_ID      = <----- paste your API ID here (from my.telegram.org)
+    API_HASH    = <----- paste your API Hash here (from my.telegram.org)
 
 Requirements (requirements.txt):
     python-telegram-bot==20.7
@@ -79,9 +79,9 @@ from telethon.tl.types import (
 #  Environment Variables
 #  PASTE YOUR CREDENTIALS BELOW ↓
 # ─────────────────────────────────────────────
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8986972976:AAGj0PFm_4wbPieaXBd423XHsISEENcLYnM")
-API_ID    = int(os.environ.get("API_ID",    "36421171"))        # <----- paste your API ID here
-API_HASH  = os.environ.get("API_HASH",  "069627fa19eb45a775ce87939f1768c5")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "<----- paste your Bot Token here")
+API_ID    = int(os.environ.get("API_ID",    "0"))        # <----- paste your API ID here
+API_HASH  = os.environ.get("API_HASH",  "<----- paste your API Hash here")
 
 # ─────────────────────────────────────────────
 #  Required Channel (users MUST join this)
@@ -1789,13 +1789,13 @@ def main() -> None:
     logger.info("=" * 60)
 
     # Validate credentials
-    if BOT_TOKEN == "8986972976:AAGj0PFm_4wbPieaXBd423XHsISEENcLYnM":
+    if BOT_TOKEN == "<----- paste your Bot Token here":
         logger.critical("❌ BOT_TOKEN not set! Set the BOT_TOKEN environment variable.")
         return
-    if API_ID == 36421171:
+    if API_ID == 0:
         logger.critical("❌ API_ID not set! Set the API_ID environment variable.")
         return
-    if API_HASH == "069627fa19eb45a775ce87939f1768c5":
+    if API_HASH == "<----- paste your API Hash here":
         logger.critical("❌ API_HASH not set! Set the API_HASH environment variable.")
         return
 
@@ -1852,9 +1852,9 @@ if __name__ == "__main__":
 # 1. Push this file to GitHub repo
 # 2. Connect repo to Railway.app
 # 3. Set Environment Variables in Railway dashboard:
-#       BOT_TOKEN  = 8986972976:AAGj0PFm_4wbPieaXBd423XHsISEENcLYnM        ← from @BotFather
-#       API_ID     = 36421171           ← from my.telegram.org
-#       API_HASH   = 069627fa19eb45a775ce87939f1768c5         ← from my.telegram.org
+#       BOT_TOKEN  = your_bot_token_here        ← from @BotFather
+#       API_ID     = your_api_id_here           ← from my.telegram.org
+#       API_HASH   = your_api_hash_here         ← from my.telegram.org
 #
 # 4. Railway auto-deploys on push ✅
 #
