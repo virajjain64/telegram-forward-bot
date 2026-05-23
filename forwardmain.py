@@ -1677,18 +1677,18 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
         logger.error(f"Unhandled error: {err}")
 
     # Try to notify user
-    if isinstance(update, Update) and update.effective_message:
-try:
-    await update.effective_message.reply_text(
-        "<b>💥 SYSTEM ERROR 💥</b>\n\n"
-        "😭 Ghost crashed bro, not gonna lie\n\n"
-        f"Error: <code>{html.escape(str(err))[:150]}</code>\n\n"
-        "🔄 Try again or contact @Virajjaint\n\n"
-        f"{html.escape(WATERMARK)}",
-        parse_mode=ParseMode.HTML,
-    )
-except Exception:
-    pass
+if isinstance(update, Update) and update.effective_message:
+    try:
+        await update.effective_message.reply_text(
+            "<b>💥 SYSTEM ERROR 💥</b>\n\n"
+            "😭 Ghost crashed bro, not gonna lie\n\n"
+            f"Error: <code>{html.escape(str(err))[:150]}</code>\n\n"
+            "🔄 Try again or contact @Virajjaint\n\n"
+            f"{html.escape(WATERMARK)}",
+            parse_mode=ParseMode.HTML,
+        )
+    except Exception:
+        pass
 
 
 # ══════════════════════════════════════════════════════════════
