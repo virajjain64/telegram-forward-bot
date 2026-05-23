@@ -48,9 +48,9 @@ from telegram.ext import (
 # 🔧 ENVIRONMENT CONFIGURATION
 # ═══════════════════════════════════════════════════════════
 
-BOT_TOKEN = os.environ.get("069627fa19eb45a775ce87939f1768c5", "")
-API_ID = os.environ.get("36421171", "")
-API_HASH = os.environ.get("7826065412:AAGD9uz_LNpMiWN3uPgyMWt2NPI1hUmNrU0", "")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7826065412:AAGD9uz_LNpMiWN3uPgyMWt2NPI1hUmNrU0")
+API_ID = os.environ.get("API_ID", "36421171")
+API_HASH = os.environ.get("API_HASH", "069627fa19eb45a775ce87939f1768c5")
 PORT = int(os.environ.get("PORT", 8080))
 
 REQUIRED_CHANNEL = "@Restrictedcontentforward_bot27"
