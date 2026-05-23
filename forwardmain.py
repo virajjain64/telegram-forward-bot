@@ -23,6 +23,7 @@ Requirements (requirements.txt):
 import os
 import re
 import asyncio
+import html
 import logging
 import random
 import time
@@ -1678,18 +1679,14 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
     # Try to notify user
     if isinstance(update, Update) and update.effective_message:
         try:
-            await update.effective_message.reply_text(
-                f"```\n"
-                f"╔═══════════════════════════╗\n"
-                f"║  💥  SYSTEM ERROR  💥     ║\n"
-                f"╚═══════════════════════════╝\n"
-                f"```\n\n"
-                f"😭 *Ghost crashed bro, not gonna lie*\n\n"
-                f"Error: `{str(err)[:150]}`\n\n"
-                f"🔄 Try again or contact @Virajjaint\n\n"
-                f"{WATERMARK}",
-                parse_mode=ParseMode.MARKDOWN,
-            )
+await update.effective_message.reply_text(
+    "<b>💥 SYSTEM ERROR 💥</b>\n\n"
+    "😭 Ghost crashed bro, not gonna lie\n\n"
+    f"Error: <code>{html.escape(str(err))[:150]}</code>\n\n"
+    "🔄 Try again or contact @Virajjaint\n\n"
+    f"{html.escape(WATERMARK)}",
+    parse_mode=ParseMode.HTML,
+)
         except Exception:
             pass
 
